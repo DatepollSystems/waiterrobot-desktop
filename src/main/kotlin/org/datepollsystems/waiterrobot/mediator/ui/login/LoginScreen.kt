@@ -34,7 +34,9 @@ fun LoginScreen(vm: LoginViewModel) {
         var password by remember { mutableStateOf("") }
         var passwordVisible by remember { mutableStateOf(false) }
         val loginContainsControlChar by remember {
-            derivedStateOf { mail.any { Character.isISOControl(it.code) } || password.any { Character.isISOControl(it.code) } }
+            derivedStateOf {
+                mail.any { Character.isISOControl(it.code) } || password.any { Character.isISOControl(it.code) }
+            }
         }
 
         Column(
