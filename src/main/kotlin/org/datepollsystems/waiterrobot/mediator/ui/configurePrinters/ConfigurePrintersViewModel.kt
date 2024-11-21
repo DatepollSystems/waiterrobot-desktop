@@ -132,7 +132,7 @@ class ConfigurePrintersViewModel(
                 PrinterService.pair(pairing.bePrinter, localPrinter)
             }
 
-            navigator.navigate(Screen.MainScreen)
+            navigator.navigate(Screen.MainScreen(state.selectedEvent.isDemo))
         }
     }
 
