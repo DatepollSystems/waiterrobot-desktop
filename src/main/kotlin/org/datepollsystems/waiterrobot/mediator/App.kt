@@ -27,6 +27,7 @@ object App {
         Sentry.init { options ->
             options.dsn = "https://8c0bbf7475344a0095f9ac542a7b616d@glitchtip.kellner.team/2"
             options.release = AppVersion.current.toString()
+            options.setTag(SentryTagKeys.instanceId, Settings.instanceId)
         }
         initKoin()
         startUI(this::onClose)
