@@ -10,6 +10,7 @@ import org.datepollsystems.waiterrobot.mediator.ws.messages.PrintTestPdfMessage
 
 class MainScreenViewModel(
     navigator: Navigator,
+    val isDemoEvent: Boolean,
 ) : AbstractViewModel<MainScreenState>(navigator, MainScreenState()) {
 
     override suspend fun onCreate() {

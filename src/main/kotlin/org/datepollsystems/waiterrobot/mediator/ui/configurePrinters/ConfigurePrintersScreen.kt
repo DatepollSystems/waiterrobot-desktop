@@ -15,10 +15,7 @@ import androidx.compose.ui.unit.dp
 import org.datepollsystems.waiterrobot.mediator.App
 import org.datepollsystems.waiterrobot.mediator.data.api.dto.GetPrinterDto
 import org.datepollsystems.waiterrobot.mediator.printer.LocalPrinterInfo
-import org.datepollsystems.waiterrobot.mediator.ui.common.CenteredText
-import org.datepollsystems.waiterrobot.mediator.ui.common.DropDownInput
-import org.datepollsystems.waiterrobot.mediator.ui.common.LoadableScreen
-import org.datepollsystems.waiterrobot.mediator.ui.common.SelectedEnvironmentInfo
+import org.datepollsystems.waiterrobot.mediator.ui.common.*
 
 @Composable
 fun ConfigurePrintersScreen(vm: ConfigurePrintersViewModel) {
@@ -27,6 +24,7 @@ fun ConfigurePrintersScreen(vm: ConfigurePrintersViewModel) {
     LoadableScreen(state.screenState) {
         Column {
             SelectedEnvironmentInfo()
+            DemoEventInfo(state.selectedEvent?.isDemo)
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically

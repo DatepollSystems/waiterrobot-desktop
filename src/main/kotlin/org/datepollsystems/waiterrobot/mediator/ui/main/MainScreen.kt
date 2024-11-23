@@ -16,6 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.datepollsystems.waiterrobot.mediator.App
+import org.datepollsystems.waiterrobot.mediator.ui.common.DemoEventInfo
 import org.datepollsystems.waiterrobot.mediator.ui.common.SelectedEnvironmentInfo
 import java.time.format.DateTimeFormatter
 
@@ -26,6 +27,7 @@ fun MainScreen(vm: MainScreenViewModel) {
 
     Column {
         SelectedEnvironmentInfo()
+        DemoEventInfo(vm.isDemoEvent)
         Row(
             modifier = Modifier.padding(vertical = 20.dp),
             verticalAlignment = Alignment.CenterVertically

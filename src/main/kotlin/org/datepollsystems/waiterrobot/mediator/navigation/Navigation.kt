@@ -30,8 +30,8 @@ fun Navigation() {
             LoginScreen(viewModel)
         }
 
-        Screen.MainScreen -> {
-            val viewModel = getViewModel { MainScreenViewModel(navigator) }
+        is Screen.MainScreen -> {
+            val viewModel = getViewModel { MainScreenViewModel(navigator, screenState.isDemoEvent) }
             MainScreen(viewModel)
         }
 

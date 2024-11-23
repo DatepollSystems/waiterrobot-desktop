@@ -4,6 +4,6 @@ sealed class Screen {
     object StartUpScreen : Screen()
     object LoginScreen : Screen()
     object ConfigurePrintersScreen : Screen()
-    object MainScreen : Screen()
+    class MainScreen(val isDemoEvent: Boolean) : Screen()
     object AppVersionTooOld : Screen()
 }

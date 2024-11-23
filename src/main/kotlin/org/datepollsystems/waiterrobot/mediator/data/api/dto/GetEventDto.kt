@@ -15,7 +15,8 @@ data class GetEventDto(
     val streetNumber: String,
     val postalCode: String,
     val city: String,
-    val organisationId: ID
+    val organisationId: ID,
+    val isDemo: Boolean
 ) {
     @Transient
     val date: LocalDate? = dateString?.let { LocalDate.parse(it) }
