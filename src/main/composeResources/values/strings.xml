@@ -27,4 +27,6 @@
     <string name="login_control_char_warning">Email or password contains control characters. Probably a copy past
         error.
     </string>
+
+    <string name="demo_event_info">The selected Event is a Demo-Event. Orders will not be printed completely.</string>
 </resources>
