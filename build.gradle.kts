@@ -30,6 +30,7 @@ dependencies {
     windowsAmd64(compose.desktop.windows_x64)
 
     implementation(compose.materialIconsExtended)
+    implementation(compose.components.resources)
 
     val ktorVersion = "2.3.11"
     implementation("io.ktor:ktor-client-core:$ktorVersion")
@@ -81,6 +82,7 @@ compose.desktop {
 
 kotlin.sourceSets.all {
     languageSettings.optIn("kotlin.RequiresOptIn")
+    languageSettings.optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
 }
 
 val detektReportMergeSarif by tasks.registering(ReportMergeTask::class) {
