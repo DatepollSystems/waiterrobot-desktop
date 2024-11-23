@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
+    <string name="ok">OK</string>
+
+    <string name="error">Error</string>
+    <string name="error_general">Something went wrong. Please try again</string>
+    <string name="continue_">Continue</string> <!-- continue is a keyword -->
+
     <string name="login">Login</string>
     <string name="login_title">Mediator Login</string>
     <string name="login_subtitle">Please login with you WaiterRobot admin account</string>
