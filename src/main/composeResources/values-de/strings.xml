@@ -9,4 +9,10 @@
     <string name="login_control_char_warning">E-Mail oder Passwort enthält ein Steuerungszeichen. Wahrscheinlich ein
         Fehler beim Kopieren.
     </string>
+
+    <string name="update_required_title">Aktualisierung benötigt</string>
+    <string name="update_required_description">Deine installierte Version wird nicht mehr unterstützt. Bitte lade die
+        neuste version herunter und installiere diese
+    </string>
+    <string name="update_go_to_download">Zum Download</string>
 </resources>

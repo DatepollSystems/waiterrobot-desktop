@@ -11,6 +11,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import org.datepollsystems.waiterrobot.mediator.mediator.generated.resources.Res
+import org.datepollsystems.waiterrobot.mediator.mediator.generated.resources.update_go_to_download
+import org.datepollsystems.waiterrobot.mediator.mediator.generated.resources.update_required_description
+import org.datepollsystems.waiterrobot.mediator.mediator.generated.resources.update_required_title
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun ForceUpdateScreen() {
@@ -22,7 +27,7 @@ fun ForceUpdateScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Aktualisierung benötigt",
+                text = stringResource(Res.string.update_required_title),
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.h2
             )
@@ -30,8 +35,7 @@ fun ForceUpdateScreen() {
             Spacer(modifier = Modifier.height(30.dp))
 
             Text(
-                text = "Deine installierte Version wird nicht mehr unterstützt. " +
-                    "Bitte lade die neuste version herunter und installiere diese.",
+                text = stringResource(Res.string.update_required_description),
                 textAlign = TextAlign.Center
             )
 
@@ -43,7 +47,7 @@ fun ForceUpdateScreen() {
                     uriHandler.openUri("https://github.com/DatepollSystems/waiterrobot-desktop/releases/latest")
                 }
             ) {
-                Text("Zum Download")
+                Text(stringResource(Res.string.update_go_to_download))
             }
         }
     }

@@ -29,4 +29,10 @@
     </string>
 
     <string name="demo_event_info">The selected Event is a Demo-Event. Orders will not be printed completely.</string>
+
+    <string name="update_required_title">Update required</string>
+    <string name="update_required_description">Your installed version is no longer supported. Please download and
+        install the newest version.
+    </string>
+    <string name="update_go_to_download">Go to download</string>
 </resources>
