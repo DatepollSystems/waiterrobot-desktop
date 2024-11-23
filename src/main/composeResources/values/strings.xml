@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="login">Login</string>
+    <string name="login_title">Mediator Login</string>
+    <string name="login_subtitle">Please login with you WaiterRobot admin account</string>
+    <string name="login_wrong_credentials">Wrong credentials. Please try again!</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_control_char_warning">Email or password contains control characters. Probably a copy past
+        error.
+    </string>
+</resources>

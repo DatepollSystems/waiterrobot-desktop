@@ -1,6 +1,7 @@
 package org.datepollsystems.waiterrobot.mediator.ui.login
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
@@ -20,9 +21,12 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import org.datepollsystems.waiterrobot.mediator.mediator.generated.resources.*
 import org.datepollsystems.waiterrobot.mediator.ui.common.LoadableScreen
 import org.datepollsystems.waiterrobot.mediator.ui.common.autofill
 import org.datepollsystems.waiterrobot.mediator.ui.common.onEnterKeyDown
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -40,24 +44,23 @@ fun LoginScreen(vm: LoginViewModel) {
         }
 
         Column(
-            modifier = Modifier.padding(50.dp).requiredWidthIn(max = 500.dp),
+            modifier = Modifier.padding(50.dp).requiredWidthIn(max = 550.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(25.dp, Alignment.CenterVertically)
         ) {
-            /* TODO
             Image(
-                painter = painterResource(""),
+                painter = painterResource(Res.drawable.icon_round),
                 contentDescription = "WaiterRobot icon",
                 modifier = Modifier
-                    .fillMaxWidth(0.5f)
+                    .fillMaxWidth(0.4f)
                     .aspectRatio(1f)
                     .padding(bottom = 20.dp)
-            ) */
-            Text(text = "Mediator Login", style = MaterialTheme.typography.h4)
+            )
+            Text(text = stringResource(Res.string.login_title), style = MaterialTheme.typography.h4)
             Text(
                 modifier = Modifier.padding(horizontal = 20.dp),
                 textAlign = TextAlign.Center,
-                text = "Please login with you WaiterRobot admin account"
+                text = stringResource(Res.string.login_subtitle)
             )
 
             if (state.loginErrorMessage != null) {
@@ -67,7 +70,7 @@ fun LoginScreen(vm: LoginViewModel) {
                     backgroundColor = Color.Red.copy(0.5f),
                 ) {
                     Box(modifier = Modifier.padding(vertical = 20.dp, horizontal = 50.dp)) {
-                        Text(state.loginErrorMessage)
+                        Text(stringResource(state.loginErrorMessage))
                     }
                 }
             }
@@ -80,7 +83,7 @@ fun LoginScreen(vm: LoginViewModel) {
                 isError = state.loginErrorMessage != null,
                 singleLine = true,
                 onValueChange = { mail = it },
-                label = { Text(text = "Email") },
+                label = { Text(text = stringResource(Res.string.login_email)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             )
 
@@ -93,7 +96,7 @@ fun LoginScreen(vm: LoginViewModel) {
                 singleLine = true,
                 isError = state.loginErrorMessage != null,
                 onValueChange = { password = it },
-                label = { Text(text = "Password") },
+                label = { Text(text = stringResource(Res.string.login_password)) },
                 visualTransformation = if (passwordVisible) {
                     VisualTransformation.None
                 } else {
@@ -119,7 +122,7 @@ fun LoginScreen(vm: LoginViewModel) {
                     backgroundColor = Color.Yellow.copy(0.5f),
                 ) {
                     Box(modifier = Modifier.padding(vertical = 20.dp, horizontal = 50.dp)) {
-                        Text("Email or password contains control characters. Probably a copy past error.")
+                        Text(stringResource(Res.string.login_control_char_warning))
                     }
                 }
             }
@@ -127,7 +130,7 @@ fun LoginScreen(vm: LoginViewModel) {
             OutlinedButton(
                 onClick = { vm.doLogin(mail, password) }
             ) {
-                Text(text = "Login")
+                Text(text = stringResource(Res.string.login))
             }
         }
     }

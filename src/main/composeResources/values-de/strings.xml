@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="login">Anmelden</string>
+    <string name="login_title">Mediator Login</string>
+    <string name="login_subtitle">Bitte melde dich mit deinem WaiterRobot admin Account an</string>
+    <string name="login_wrong_credentials">Invalide Zugangsdaten. Bitte versuche es noch einmal!</string>
+    <string name="login_email">E-Mail</string>
+    <string name="login_password">Passwort</string>
+    <string name="login_control_char_warning">E-Mail oder Passwort enthält ein Steuerungszeichen. Wahrscheinlich ein
+        Fehler beim Kopieren.
+    </string>
+</resources>
