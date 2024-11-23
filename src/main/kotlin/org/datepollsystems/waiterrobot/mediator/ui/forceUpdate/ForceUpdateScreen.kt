@@ -1,10 +1,10 @@
 package org.datepollsystems.waiterrobot.mediator.ui.forceUpdate
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,7 +29,7 @@ fun ForceUpdateScreen() {
             Text(
                 text = stringResource(Res.string.update_required_title),
                 textAlign = TextAlign.Center,
-                style = MaterialTheme.typography.h2
+                style = MaterialTheme.typography.displayMedium
             )
 
             Spacer(modifier = Modifier.height(30.dp))

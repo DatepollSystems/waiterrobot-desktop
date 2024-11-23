@@ -6,10 +6,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -56,7 +56,7 @@ fun LoginScreen(vm: LoginViewModel) {
                     .aspectRatio(1f)
                     .padding(bottom = 20.dp)
             )
-            Text(text = stringResource(Res.string.login_title), style = MaterialTheme.typography.h4)
+            Text(text = stringResource(Res.string.login_title), style = MaterialTheme.typography.headlineMedium)
             Text(
                 modifier = Modifier.padding(horizontal = 20.dp),
                 textAlign = TextAlign.Center,
@@ -67,7 +67,7 @@ fun LoginScreen(vm: LoginViewModel) {
                 Card(
                     shape = RoundedCornerShape(10),
                     border = BorderStroke(2.dp, Color.Red.copy(0.8f)),
-                    backgroundColor = Color.Red.copy(0.5f),
+                    colors = CardDefaults.cardColors(containerColor = Color.Red.copy(0.5f)),
                 ) {
                     Box(modifier = Modifier.padding(vertical = 20.dp, horizontal = 50.dp)) {
                         Text(stringResource(state.loginErrorMessage))
@@ -119,7 +119,7 @@ fun LoginScreen(vm: LoginViewModel) {
                 Card(
                     shape = RoundedCornerShape(10),
                     border = BorderStroke(2.dp, Color.Yellow.copy(0.8f)),
-                    backgroundColor = Color.Yellow.copy(0.5f),
+                    colors = CardDefaults.cardColors(containerColor = Color.Yellow.copy(0.5f)),
                 ) {
                     Box(modifier = Modifier.padding(vertical = 20.dp, horizontal = 50.dp)) {
                         Text(stringResource(Res.string.login_control_char_warning))
