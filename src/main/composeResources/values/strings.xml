@@ -6,6 +6,18 @@
     <string name="error_general">Something went wrong. Please try again</string>
     <string name="continue_">Continue</string> <!-- continue is a keyword -->
 
+    <string name="organization">Organization</string>
+    <string name="select_organization_placeholder">Select an Organization...</string>
+    <string name="event">Event</string>
+    <string name="select_event_placeholder">Select an Event...</string>
+
+    <string name="pairing_pairings">Pairings</string>
+    <string name="pairing_backend_printers">Backend Printers</string>
+    <string name="pairing_local_printers">Local Printers</string>
+    <string name="pairing_pair">Pair selected printers</string>
+    <string name="pairing_select_organization">Please select an Organization.</string>
+    <string name="pairing_select_event">Please select an Event.</string>
+
     <string name="login">Login</string>
     <string name="login_title">Mediator Login</string>
     <string name="login_subtitle">Please login with you WaiterRobot admin account</string>
