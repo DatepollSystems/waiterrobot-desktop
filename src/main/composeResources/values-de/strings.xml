@@ -11,6 +11,13 @@
     <string name="event">Event</string>
     <string name="select_event_placeholder">Wähle ein Event...</string>
 
+    <string name="pairing_pairings">Verbindungen</string>
+    <string name="pairing_backend_printers">Backend Drucker</string>
+    <string name="pairing_local_printers">Lokale Drucker</string>
+    <string name="pairing_pair">Ausgewählte Drucker verbinden</string>
+    <string name="pairing_select_organization">Bitte wähle eine Organisation.</string>
+    <string name="pairing_select_event">Bitte wähle ein Event.</string>
+
     <string name="login">Anmelden</string>
     <string name="login_title">Mediator Login</string>
     <string name="login_subtitle">Bitte melde dich mit deinem WaiterRobot admin Account an</string>
