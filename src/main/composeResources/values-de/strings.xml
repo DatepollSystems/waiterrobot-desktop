@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
+    <string name="ok">OK</string>
+
+    <string name="error">Fehler</string>
+    <string name="error_general">Etwas ist schief gegangen. Bitte versuch es noch einmal</string>
+    <string name="continue_">Weiter</string> <!-- continue is a keyword -->
+
+    <string name="organization">Organisation</string>
+    <string name="select_organization_placeholder">Wähle eine Organisation...</string>
+    <string name="event">Event</string>
+    <string name="select_event_placeholder">Wähle ein Event...</string>
+
     <string name="login">Anmelden</string>
     <string name="login_title">Mediator Login</string>
     <string name="login_subtitle">Bitte melde dich mit deinem WaiterRobot admin Account an</string>
@@ -10,11 +21,18 @@
         Fehler beim Kopieren.
     </string>
 
+    <string name="demo_event_info">Das ausgewälte ist ein Demo-Event. Bestellungen werden nicht vollständig gedruckt.
+    </string>
+
     <string name="update_required_title">Aktualisierung benötigt</string>
     <string name="update_required_description">Deine installierte Version wird nicht mehr unterstützt. Bitte lade die
         neuste version herunter und installiere diese
     </string>
     <string name="update_go_to_download">Zum Download</string>
+
+    <string name="main_connected">Verbungen</string>
+    <string name="main_lost_connection">Verbindung verloren - reconnecting...</string>
+    <string name="main_running">Wird ausgeführt...</string>
 
     <string name="start_update_now">Jetzt aktualisieren</string>
     <string name="start_update_not_now">Nicht jetzt</string>
