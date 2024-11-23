@@ -25,6 +25,7 @@ import org.datepollsystems.waiterrobot.mediator.ui.common.SelectedEnvironmentInf
 import org.jetbrains.compose.resources.stringResource
 import java.time.format.DateTimeFormatter
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(vm: MainScreenViewModel) {
     val state = vm.state.collectAsState().value
@@ -38,16 +39,31 @@ fun MainScreen(vm: MainScreenViewModel) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = "Running...",
+                text = stringResource(Res.string.main_running),
                 modifier = Modifier.weight(1f),
                 textAlign = TextAlign.Center,
             )
 
-            Icon(
-                if (isConnected) Icons.Filled.Wifi else Icons.Filled.WifiOff,
-                contentDescription = "Socket Connected",
-                modifier = Modifier.padding(horizontal = 10.dp)
-            )
+            val tooltipPosition = TooltipDefaults.rememberPlainTooltipPositionProvider()
+            val tooltipState = rememberTooltipState()
+
+            TooltipBox(
+                positionProvider = tooltipPosition,
+                state = tooltipState,
+                tooltip = {
+                    Text(
+                        stringResource(
+                            if (isConnected) Res.string.main_connected else Res.string.main_lost_connection
+                        )
+                    )
+                }
+            ) {
+                Icon(
+                    if (isConnected) Icons.Filled.Wifi else Icons.Filled.WifiOff,
+                    contentDescription = "Socket Connected",
+                    modifier = Modifier.padding(horizontal = 10.dp)
+                )
+            }
         }
         HorizontalDivider(thickness = 3.dp)
 

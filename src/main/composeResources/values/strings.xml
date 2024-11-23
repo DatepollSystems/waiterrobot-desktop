@@ -35,4 +35,8 @@
         install the newest version.
     </string>
     <string name="update_go_to_download">Go to download</string>
+
+    <string name="main_connected">Connected</string>
+    <string name="main_lost_connection">Lost connection - reconnecting...</string>
+    <string name="main_running">Running...</string>
 </resources>
