@@ -44,7 +44,7 @@ fun ForceUpdateScreen() {
             val uriHandler = LocalUriHandler.current
             Button(
                 onClick = {
-                    uriHandler.openUri("https://github.com/DatepollSystems/waiterrobot-desktop/releases/latest")
+                    uriHandler.openUri("https://get.kellner.team/download.html")
                 }
             ) {
                 Text(stringResource(Res.string.update_go_to_download))

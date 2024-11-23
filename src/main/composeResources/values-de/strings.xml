@@ -15,4 +15,11 @@
         neuste version herunter und installiere diese
     </string>
     <string name="update_go_to_download">Zum Download</string>
+
+    <string name="start_update_now">Jetzt aktualisieren</string>
+    <string name="start_update_not_now">Nicht jetzt</string>
+    <string name="start_new_version_title">Neue Version</string>
+    <string name="start_new_version_description">Eine neue Version steht zur Verfügung. Update jetzt um alle neuen
+        Funktionalitäten nutzen zu können.
+    </string>
 </resources>

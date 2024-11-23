@@ -39,4 +39,11 @@
     <string name="main_connected">Connected</string>
     <string name="main_lost_connection">Lost connection - reconnecting...</string>
     <string name="main_running">Running...</string>
+
+    <string name="start_update_now">Update now</string>
+    <string name="start_update_not_now">Not now</string>
+    <string name="start_new_version_title">New version</string>
+    <string name="start_new_version_description">A new version is available. Update now to get all new features and
+        improvements.
+    </string>
 </resources>
